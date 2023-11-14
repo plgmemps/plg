@@ -12,7 +12,7 @@ def homepage(request):
     context = {
         'contratos' : contratos,
     }
-    return render(request, 'homepage.html', context)
+    return render(request, 'planejamento/homepage.html', context)
 def obra(request, slug):
     
     obra = Contrato.objects.filter(slug=slug)
@@ -29,4 +29,4 @@ def obra(request, slug):
         'form':form,
     }
     
-    return render(request, 'obra.html', context)
+    return render(request, 'planejamento/obra.html', context)
